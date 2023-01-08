@@ -1,2 +1,3 @@
-# online-training
-Tools for my online classes
+# Online Training
+This repository serves as additional resource for my online classes
+
