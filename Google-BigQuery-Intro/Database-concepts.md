@@ -1,4 +1,8 @@
-# Starting with WHY
+# Database Concepts
+
+Without delving deeply into the topic, we discussed the current context of data technologies.
+
+## Starting with WHY
 
 >*Motto*: Having a reason to learn about something is crucial to really learning it. 
 >Knowing the topic's **"why"** can provide this meaning and make class more interesting and worthwhile.  
@@ -15,5 +19,5 @@ Utilizing data and statistical models, this sort of analytics predicts future ou
 - **Prescriptive analytics**  
 This type of analytics uses data and advanced analytics techniques to not only anticipate what may occur, but also to recommend actions that can be taken to attain a desired outcome.
 
-#### Instead of a conclusion
+### Instead of a conclusion (for this segment)
 One of the most important reasons why businesses require databases is to store and manage the data utilized for these types of analytics. A database is a structured collection of electronically stored data that can be accessed, updated, and queried with relative ease. By keeping data in a database, businesses can analyze and acquire insights from their data more readily.
