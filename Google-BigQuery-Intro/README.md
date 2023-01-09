@@ -17,14 +17,14 @@ This course is broken up into:
 
 - [Database concepts](Database-concepts.md)
 - [BigQuery for the first time](BigQuery-for-the-first-time.md)
-- Using SQL commands to select, filter, and sort data
-- Understanding data types in BigQuery (e.g., INTEGER, FLOAT, STRING, TIMESTAMP)
-- Retrieve data from multiple tables (joins)
-- Using subqueries
-- Aggregating data in BigQuery
-- Using GROUP BY and HAVING clauses 
-- Using window functions
-- Common Table Expressions (CTEs)
+- [Using SQL commands to select, filter, and sort data](Select-filter-sort-data.md)
+- [Understanding data types in BigQuery (e.g., INTEGER, FLOAT, STRING, TIMESTAMP)](Understanding-data-types-in-bigquery.md)
+- [Retrieve data from multiple tables (joins)](Joins.md)
+- [Using Subqueries](Using-subqueries.md)
+- [Aggregating data in BigQuery](Aggregating-data.md)
+- [Using GROUP BY and HAVING clauses](Using-group-by.md) 
+- [Using Window Functions](Using-window-functions.md)
+- [Common Table Expressions (CTEs)](Ctes.md)
 
 ## License
 
