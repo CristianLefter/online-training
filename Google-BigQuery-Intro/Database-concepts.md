@@ -5,6 +5,7 @@ Without delving deeply into the topic, we discussed the current context of data 
 Content:
 - [Starting with WHY](Database-concepts.md#starting-with-why)
 - [Databases Timeline](Database-concepts.md#databases-timeline)
+- [What is SQL](Database-concepts.md#what-is-sql)
 
 ## Starting with WHY
 
@@ -47,4 +48,14 @@ Hadoop, Spark, and Apache Flink are examples of the BigData technologies.
 - **Cloud databases** are hosted and managed by a cloud service provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The benefits of cloud databases include scalability, flexibility, and reduced maintenance expenses.  
 A few popular cloud database solutions are Amazon DynamoDB, Microsoft Azure Cosmos DB, and Google Cloud Bigtable.
 
+## What is SQL
 
+SQL is similar to a recipe for database interaction. SQL instructs a database service on how to arrange and handle data, much like a recipe instructs on how to combine components for a delicious dish.
+
+Imagine a database as a large filing cabinet, with each "drawer" representing a table of data and each "folder" representing a row in that table. SQL enables you to search through these drawers and folders, locate specific information, and even modify it.
+A database can also be viewed as a collection of tables, with each table including rows and columns, with each row representing an entity (such as a client, an order, or a student) and each column reflecting the item's attributes (such as name, location, time).
+
+For instance, SQL can be used to:
+- Find all the consumers who reside in a particular city
+- Count the amount of orders each customer has placed.
+- Update the price of a product across all stores in a region.
