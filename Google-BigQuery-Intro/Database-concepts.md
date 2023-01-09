@@ -6,6 +6,7 @@ Content:
 - [Starting with WHY](Database-concepts.md#starting-with-why)
 - [Databases Timeline](Database-concepts.md#databases-timeline)
 - [What is SQL](Database-concepts.md#what-is-sql)
+- [OLTP, OLAP and HTAP](Database-concepts.md#what-is-sql)
 
 ## Starting with WHY
 
@@ -59,3 +60,5 @@ For instance, SQL can be used to:
 - Find all the consumers who reside in a particular city
 - Count the amount of orders each customer has placed.
 - Update the price of a product across all stores in a region.
+
+## OLTP, OLAP and HTAP
