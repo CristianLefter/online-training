@@ -45,7 +45,6 @@ In this category are included MongoDB, Cassandra, and Couchbase.
 - **Big data technologies**: The term **"big data"** refers to the increasing volume, diversity, and velocity of data generated and collected by businesses. To manage and analyze enormous data, a number of big data technologies, such as Hadoop, Spark, and NoSQL databases, have been developed. These technologies enable enterprises to store and process vast quantities of data in a distributed and scalable manner.  
 Hadoop, Spark, and Apache Flink are examples of the BigData technologies.
 
-
 - **Cloud databases** are hosted and managed by a cloud service provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The benefits of cloud databases include scalability, flexibility, and reduced maintenance expenses.  
 A few popular cloud database solutions are Amazon DynamoDB, Microsoft Azure Cosmos DB, and Google Cloud Bigtable.
 
@@ -62,3 +61,14 @@ For instance, SQL can be used to:
 - Update the price of a product across all stores in a region.
 
 ## OLTP, OLAP and HTAP
+
+Querying data models have changed throughout time to satisfy the evolving data storage, management, and analysis requirements of companies. 
+Among the design models and their applications are:
+
+- **Online Transaction Processing (OLTP)** solutions are designed to meet enterprises' high-volume, high-concurrency transaction processing needs. They are optimized for fast insert, update, and delete operations and are often employed in operational systems like inventory management and order processing.  
+To improve the system's performance and scalability, they typically employ a database design technique known as normalization.  
+Normalization is a database design technique that involves dividing data in a database into multiple tables in order to reduce redundancy and dependency. 
+
+- **Online Analytical Processing (OLAP)** systems: OLAP systems are intended to serve organizations' complicated query and analytical demands. Typically used for business intelligence (BI) and data warehousing applications, these databases are intended for rapid querying and processing of massive data sets.
+
+- **Hybrid Transaction/Analytical Processing (HTAP systems)** are hybrid OLTP/OLAP systems that support transactional processing and analytics. HTAP systems offer real-time analytics on operational data and a full perspective of business operations. We can name here: SAP HANA, Oracle Database In-Memory, MemSQL, Google Cloud Bigtable, Microsoft Azure Cosmos DB and Splice Machine.
