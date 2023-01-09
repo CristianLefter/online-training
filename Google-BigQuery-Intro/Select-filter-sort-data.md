@@ -4,6 +4,7 @@ The **SELECT** statement is used in Google BigQuery to retrieve data from a tabl
 
 Content
 - [General Syntax](Select-filter-sort-data.md#general-syntax)
+- [Filter Data](Select-filter-sort-data.md#general-syntax)
 
 ## General Syntax
 
@@ -51,4 +52,14 @@ The minimal SELECT statement if the following:
 SELECT 1 as colname;
 ``` 
 In this statement the keyword **as** allows us to set the name for the resulted column **colname**.
+
+## Filter Data
+
+One way of filtering data is using the WHERE clause. The WHERE clause in a SELECT statement in BigQuery standard SQL is used to filter the rows in the result set based on specific criteria. Only rows that meet the specified conditions will be included in the final result set.
+
+The **WHERE** clause has the following syntax:
+```sql
+WHERE condition
+``` 
+The **condition** can be any expression that returns a Boolean value (true or false). If the condition evaluates to true, the row will be included in the result set.
 
