@@ -35,9 +35,37 @@ For details we can use the following links:
 - [Google Standard SQL - Data Types](https://cloud.google.com/spanner/docs/reference/standard-sql/data-types)  
 - [Google Standard SQL - Data Definition Language](https://cloud.google.com/spanner/docs/reference/standard-sql/data-definition-language)  
 - [Google Standard SQL - JOIN operator](https://cloud.google.com/spanner/docs/reference/standard-sql/query-syntax#join_types)  
-[Google Standard SQLstring_functions)  
- - [Query Syntax](https://cloud.google.com/spanner/docs/reference/standard-sql/query-syntax)  
-[Google Standard SQL - String Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/
+- [Google Standard SQL - Query Syntax](https://cloud.google.com/spanner/docs/reference/standard-sql/query-syntax)  
+- [Google Standard SQL - String Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/)
+
+## Reserved words
+
+|keyword|keyword|keyword|keyword|
+ | --- | --- | --- | --- | 
+ | ALL | ENUM | IS | RANGE | 
+ | AND | ESCAPE | JOIN | RECURSIVE | 
+ | ANY | EXCEPT | LATERAL | RESPECT | 
+ | ARRAY | EXCLUDE | LEFT | RIGHT | 
+ | AS | EXISTS | LIKE | ROLLUP | 
+ | ASC | EXTRACT | LIMIT | ROWS | 
+ | ASSERT_ROWS_MODIFIED | FALSE | LOOKUP | SELECT | 
+ | AT | FETCH | MERGE | SET | 
+ | BETWEEN | FOLLOWING | NATURAL | SOME | 
+ | BY | FOR | NEW | STRUCT | 
+ | CASE | FROM | NO | TABLESAMPLE | 
+ | CAST | FULL | NOT | THEN | 
+ | COLLATE | GROUP | NULL | TO | 
+ | CONTAINS | GROUPING | NULLS | TREAT | 
+ | CREATE | GROUPS | OF | TRUE | 
+ | CROSS | HASH | ON | UNBOUNDED | 
+ | CUBE | HAVING | OR | UNION | 
+ | CURRENT | IF | ORDER | UNNEST | 
+ | DEFAULT | IGNORE | OUTER | USING | 
+ | DEFINE | IN | OVER | WHEN | 
+ | DESC | INNER | PARTITION | WHERE | 
+ | DISTINCT | INTERSECT | PRECEDING | WINDOW | 
+ | ELSE | INTERVAL | PROTO | WITH | 
+ | END | INTO | QUALIFY | WITHIN | 
 
 
 ## License
