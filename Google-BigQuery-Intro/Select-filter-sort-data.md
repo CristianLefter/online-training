@@ -63,3 +63,16 @@ WHERE condition
 ``` 
 The **condition** can be any expression that returns a Boolean value (true or false). If the condition evaluates to true, the row will be included in the result set.
 
+We can use the following operators in the WHERE clause:
+
+- **=**: equal to
+- **<>**: not equal to
+- **>**: greater than
+- **<**: less than
+- **>=**: greater than or equal to
+- **<=**: less than or equal to
+- **IN**: in a list of values
+- **BETWEEN**: between two values
+
+You can also use logical operators (**AND**, **OR**, **NOT**) to combine multiple conditions.
+
