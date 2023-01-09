@@ -4,7 +4,7 @@ The **SELECT** statement is used in Google BigQuery to retrieve data from a tabl
 
 Content
 - [General Syntax](Select-filter-sort-data.md#general-syntax)
-- [Filter Data](Select-filter-sort-data.md#general-syntax)
+- [Filter Data](Select-filter-sort-data.md#filter-data)
 
 ## General Syntax
 
