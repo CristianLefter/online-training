@@ -13,7 +13,7 @@ BigQuery enables users to construct tables and load data in a number of ways, in
 
 This course is broken up into:
 
-- Database concepts
+- [Database concepts](Database-concepts.md)
 - [BigQuery for the first time](BigQuery-for-the-first-time.md)
 - Using SQL commands to select, filter, and sort data
 - Understanding data types in BigQuery (e.g., INTEGER, FLOAT, STRING, TIMESTAMP)
