@@ -5,7 +5,7 @@ The **SELECT** statement is used in Google BigQuery to retrieve data from a tabl
 Content
 - [General Syntax](Select-filter-sort-data.md#general-syntax)
 
-## General Sytax
+## General Syntax
 
 The general syntax for a SELECT statement in BigQuery standard SQL is as follows:
 
