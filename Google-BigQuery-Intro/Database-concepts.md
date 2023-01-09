@@ -3,7 +3,8 @@
 Without delving deeply into the topic, we discussed the current context of data technologies.
 
 Content:
-- [Starting with WHY](https://github.com/CristianLefter/online-training/blob/master/Google-BigQuery-Intro/Database-concepts.md#starting-with-why)
+- [Starting with WHY](Database-concepts.md#starting-with-why)
+- [Databases Timeline](link)
 
 ## Starting with WHY
 
