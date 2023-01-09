@@ -15,7 +15,10 @@ LIMIT [number of rows to return]
 ```
 
 Here is a breakdown of each part of the SELECT statement:
-- **SELECT** *[list of fields or expressions]*: This specifies the list of fields or expressions that you want to retrieve. You can use the * character to select all fields.
+- **SELECT** *[list of fields or expressions]*: This specifies the list of fields or expressions that you want to retrieve. You can use the * character to select all fields.   
+```
+  Using * is considered an anti-pattern!
+```
 - **FROM** *[source]*: This specifies the source table or view that you want to retrieve data from.
 - **WHERE** *[conditions]*: This specifies any conditions that must be met for a row to be included in the result set.
 - **GROUP BY** *[field or expression]*: This specifies a field or expression that you want to group the results by.
