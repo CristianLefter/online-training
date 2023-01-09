@@ -6,7 +6,7 @@ Content:
 - [Starting with WHY](Database-concepts.md#starting-with-why)
 - [Databases Timeline](Database-concepts.md#databases-timeline)
 - [What is SQL](Database-concepts.md#what-is-sql)
-- [OLTP, OLAP and HTAP](Database-concepts.md#what-is-sql)
+- [OLTP, OLAP and HTAP](Database-concepts.md#oltp-olap-and-htap)
 
 ## Starting with WHY
 
