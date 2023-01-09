@@ -1,1 +1,11 @@
-# Google BigQuery - Intro
+# Google BigQuery - Introduction
+This repository comprises the online textbook for the Google BigQuery - Introduction course.
+## Google BigQuery overview
+Google BigQuery is a fully-managed, cloud-based data warehouse solution that enables lightning-fast SQL queries against huge and complicated datasets by leveraging Google's infrastructure processing power. It is a serverless Platform as a Service (PaaS) that supports ANSI SQL querying and can manage structured and semistructured data.
+
+BigQuery is built to manage high volume and high concurrency at petabyte scale, making it an excellent option for enterprises that need to process a vast deal of data. It allows users to utilize SQL to examine data saved in Google Cloud Storage, Google Drive, and Google Cloud Bigtable.
+
+BigQuery enables users to construct tables and load data in a number of ways, including by uploading a file, importing data from Google Cloud Storage or Google Drive, streaming data in real-time, or utilizing the BigQuery API to insert data. Once data is in BigQuery, users may generate reports and dashboards using a range of visualization tools, such as Google Data Studio and Google Sheets, or link to business intelligence tools such as Looker and Tableau to do more complex analysis.
+## Course structure
+This course is broken up into:
+- 
