@@ -9,6 +9,8 @@ BigQuery is built to manage high volume and high concurrency at petabyte scale, 
 
 BigQuery enables users to construct tables and load data in a number of ways, including by uploading a file, importing data from Google Cloud Storage or Google Drive, streaming data in real-time, or utilizing the BigQuery API to insert data. Once data is in BigQuery, users may generate reports and dashboards using a range of visualization tools, such as Google Data Studio and Google Sheets, or link to business intelligence tools such as Looker and Tableau to do more complex analysis.
 
+BigQuery has two SQL dialects: [Google Standard SQL and legacy SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql). Google Standard SQL is the preferred dialect (and the one used in this course). It supports [SQL:2011](https://www.iso.org/standard/53681.html) and includes extensions that support geospatial analysis 
+
 ## Course structure
 
 This course is broken up into:
