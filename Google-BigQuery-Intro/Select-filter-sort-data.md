@@ -76,3 +76,28 @@ We can use the following operators in the WHERE clause:
 
 You can also use logical operators (**AND**, **OR**, **NOT**) to combine multiple conditions.
 
+Here are some examples of using the WHERE clause with the Google Analytics public dataset in BigQuery:
+
+```sql
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+WHERE _TABLE_SUFFIX BETWEEN '20170701' AND '20170731'
+```
+This SELECT statement would retrieve all fields from the tables in the **ga_sessions_***  wildcard table in the **google_analytics_sample** dataset in the **bigquery-public-data** project, where the table suffix is between **'20170701'** and **'20170731'**. This would return data for the month of **July 2017**.
+
+```sql
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+WHERE device.deviceCategory = 'desktop'
+```
+
+This SELECT statement would retrieve all fields from the tables in the **ga_sessions_*** wildcard table in the **google_analytics_sample**  dataset in the **bigquery-public-data** project, where the device category is **'desktop'**. This would return data for sessions from desktop devices.
+
+```sql
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+WHERE trafficSource.source IN ('google', 'bing', 'yahoo')
+```
+
+This SELECT statement would retrieve all fields from the tables in the **ga_sessions_*** wildcard table in the **google_analytics_sample** dataset in the **bigquery-public-data** project, where the traffic source is either **'google'**, **'bing'**, or **'yahoo'**. This would return data for sessions from these search engines.
+
