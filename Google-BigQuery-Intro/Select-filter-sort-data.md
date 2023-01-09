@@ -2,6 +2,11 @@
 
 The **SELECT** statement is used in Google BigQuery to retrieve data from a table or a view in a dataset. It is one of the most commonly used SQL statements and is used to retrieve a specific subset of data from one or more tables.
 
+Content
+- [General Syntax](Select-filter-sort-data.md#general-syntax)
+
+## General Sytax
+
 The general syntax for a SELECT statement in BigQuery standard SQL is as follows:
 
 ```sql
@@ -40,4 +45,10 @@ LIMIT 1000
 This SELECT statement would retrieve all fields from the **usa_1910_2013** table in the **usa_names** dataset in the **bigquery-public-data project**, where the gender is **'F'** and the year is greater than **1950**, grouped by **name**, having a count of more than **10**, ordered by **count** in descending order, and limited to **1,000** rows.
 
 This SELECT statement would return a list of names that were popular for females in the **USA** from **1950** onwards, where the name was used at least **10** times. The names would be ordered by the number of times they were used, with the most popular names appearing first.
+
+The minimal SELECT statement if the following:
+```sql 
+SELECT 1 as colname;
+``` 
+In this statement the keyword **as** allows us to set the name for the resulted column **colname**.
 
