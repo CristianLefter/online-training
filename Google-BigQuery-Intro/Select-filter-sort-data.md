@@ -26,4 +26,13 @@ Here is a breakdown of each part of the SELECT statement:
 - **ORDER BY** *[field or expression]* [**ASC**|**DESC**]: This specifies a field or expression that you want to use to order the results. You can specify ASC for ascending order or DESC for descending order.
 - **LIMIT** *[number of rows to return]*: This specifies the maximum number of rows to return in the result set.
 
-
+An example that is using a public dataset:
+```sql
+SELECT name, COUNT(*) as nmbofnames
+FROM `bigquery-public-data.usa_names.usa_1910_2013`
+WHERE gender = 'F' AND year > 1950
+GROUP BY name
+HAVING COUNT(*) > 10
+ORDER BY nmbofnames DESC
+LIMIT 1000
+```
