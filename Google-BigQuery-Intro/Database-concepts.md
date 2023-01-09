@@ -66,9 +66,9 @@ Querying data models have changed throughout time to satisfy the evolving data s
 Among the design models and their applications are:
 
 - **Online Transaction Processing (OLTP)** solutions are designed to meet enterprises' high-volume, high-concurrency transaction processing needs. They are optimized for fast insert, update, and delete operations and are often employed in operational systems like inventory management and order processing.  
-To improve the system's performance and scalability, they typically employ a database design technique known as normalization.  
+To improve the system's performance and scalability, they typically employ a database design technique known as **normalization**.  
 Normalization is a database design technique that involves dividing data in a database into multiple tables in order to reduce redundancy and dependency. 
 
-- **Online Analytical Processing (OLAP)** systems: OLAP systems are intended to serve organizations' complicated query and analytical demands. Typically used for business intelligence (BI) and data warehousing applications, these databases are intended for rapid querying and processing of massive data sets.
+- **Online Analytical Processing (OLAP)** systems: OLAP systems are intended to serve organizations' complicated query and analytical demands. Typically used for business intelligence (BI) and data warehousing applications, these databases are intended for rapid querying and processing of massive data sets. Google BigQuery belongs to this category.
 
 - **Hybrid Transaction/Analytical Processing (HTAP systems)** are hybrid OLTP/OLAP systems that support transactional processing and analytics. HTAP systems offer real-time analytics on operational data and a full perspective of business operations. We can name here: SAP HANA, Oracle Database In-Memory, MemSQL, Google Cloud Bigtable, Microsoft Azure Cosmos DB and Splice Machine.
