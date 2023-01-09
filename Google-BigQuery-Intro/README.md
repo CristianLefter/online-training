@@ -7,5 +7,16 @@ BigQuery is built to manage high volume and high concurrency at petabyte scale, 
 
 BigQuery enables users to construct tables and load data in a number of ways, including by uploading a file, importing data from Google Cloud Storage or Google Drive, streaming data in real-time, or utilizing the BigQuery API to insert data. Once data is in BigQuery, users may generate reports and dashboards using a range of visualization tools, such as Google Data Studio and Google Sheets, or link to business intelligence tools such as Looker and Tableau to do more complex analysis.
 ## Course structure
+
 This course is broken up into:
-- 
+- Database concepts
+- BigQuery for the first time
+- Using SQL commands to select, filter, and sort data
+- Understanding data types in BigQuery (e.g., INTEGER, FLOAT, STRING, TIMESTAMP)
+- Retrieve data from multiple tables (joins)
+- Using subqueries
+- Aggregating data in BigQuery
+- Using GROUP BY and HAVING clauses 
+- Using window functions
+- Common Table Expressions (CTEs)
+
