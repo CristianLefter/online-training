@@ -2,6 +2,9 @@
 
 Without delving deeply into the topic, we discussed the current context of data technologies.
 
+Content:
+- [Starting with WHY](https://github.com/CristianLefter/online-training/blob/master/Google-BigQuery-Intro/Database-concepts.md#starting-with-why)
+
 ## Starting with WHY
 
 >*Motto*: Having a reason to learn about something is crucial to really learning it. 
