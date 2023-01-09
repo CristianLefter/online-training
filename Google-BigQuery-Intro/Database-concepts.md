@@ -60,6 +60,16 @@ For instance, SQL can be used to:
 - Count the amount of orders each customer has placed.
 - Update the price of a product across all stores in a region.
 
+
+```sql
+  SELECT col1, col2, col3, (col4 + 5) * 7 AS col5
+  FROM `my-project.my_dataset.my_table`
+  WHERE col1 IN ('abc', 'def', 'ghi') 
+	    AND (col2 BETWEEN 100 AND 200 OR col3 IS NULL)
+  GROUP BY col4, col5
+  HAVING AVG(col5) > 10
+```
+
 ## OLTP, OLAP and HTAP
 
 Querying data models have changed throughout time to satisfy the evolving data storage, management, and analysis requirements of companies. 
