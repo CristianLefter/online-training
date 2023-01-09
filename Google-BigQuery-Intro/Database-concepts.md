@@ -5,8 +5,8 @@ Without delving deeply into the topic, we discussed the current context of data 
 Content:
 - [Starting with WHY](Database-concepts.md#starting-with-why)
 - [Databases Timeline](Database-concepts.md#databases-timeline)
-- [What is SQL](Database-concepts.md#what-is-sql)
 - [OLTP, OLAP and HTAP](Database-concepts.md#oltp-olap-and-htap)
+- [What is SQL](Database-concepts.md#what-is-sql)
 
 ## Starting with WHY
 
@@ -48,6 +48,19 @@ Hadoop, Spark, and Apache Flink are examples of the BigData technologies.
 - **Cloud databases** are hosted and managed by a cloud service provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The benefits of cloud databases include scalability, flexibility, and reduced maintenance expenses.  
 A few popular cloud database solutions are Amazon DynamoDB, Microsoft Azure Cosmos DB, and Google Cloud Bigtable.
 
+## OLTP, OLAP and HTAP
+
+Querying data models have changed throughout time to satisfy the evolving data storage, management, and analysis requirements of companies. 
+Among the design models and their applications are:
+
+- **Online Transaction Processing (OLTP)** solutions are designed to meet enterprises' high-volume, high-concurrency transaction processing needs. They are optimized for fast insert, update, and delete operations and are often employed in operational systems like inventory management and order processing.  
+To improve the system's performance and scalability, they typically employ a database design technique known as **normalization**.  
+Normalization is a database design technique that involves dividing data in a database into multiple tables in order to reduce redundancy and dependency. 
+
+- **Online Analytical Processing (OLAP)** systems: OLAP systems are intended to serve organizations' complicated query and analytical demands. Typically used for business intelligence (BI) and data warehousing applications, these databases are intended for rapid querying and processing of massive data sets. Google BigQuery belongs to this category.
+
+- **Hybrid Transaction/Analytical Processing (HTAP systems)** are hybrid OLTP/OLAP systems that support transactional processing and analytics. HTAP systems offer real-time analytics on operational data and a full perspective of business operations. We can name here: SAP HANA, Oracle Database In-Memory, MemSQL, Google Cloud Bigtable, Microsoft Azure Cosmos DB and Splice Machine.
+
 ## What is SQL
 
 SQL is similar to a recipe for database interaction. SQL instructs a database service on how to arrange and handle data, much like a recipe instructs on how to combine components for a delicious dish.
@@ -80,24 +93,8 @@ For example, the predicate col1 = 'abc' will evaluate to TRUE for rows where the
 ```
 
 In this example:
-- SELECT and FROM are clauses.
-- col1, col2, col3, and col5 are columns.
-- 'abc', 'def', 'ghi', and 10 are literals.
-- (col4 + 5) * 7 and AVG(col5) are expressions.
-- IN, BETWEEN, and IS NULL are predicates.
-
-
-
-
-## OLTP, OLAP and HTAP
-
-Querying data models have changed throughout time to satisfy the evolving data storage, management, and analysis requirements of companies. 
-Among the design models and their applications are:
-
-- **Online Transaction Processing (OLTP)** solutions are designed to meet enterprises' high-volume, high-concurrency transaction processing needs. They are optimized for fast insert, update, and delete operations and are often employed in operational systems like inventory management and order processing.  
-To improve the system's performance and scalability, they typically employ a database design technique known as **normalization**.  
-Normalization is a database design technique that involves dividing data in a database into multiple tables in order to reduce redundancy and dependency. 
-
-- **Online Analytical Processing (OLAP)** systems: OLAP systems are intended to serve organizations' complicated query and analytical demands. Typically used for business intelligence (BI) and data warehousing applications, these databases are intended for rapid querying and processing of massive data sets. Google BigQuery belongs to this category.
-
-- **Hybrid Transaction/Analytical Processing (HTAP systems)** are hybrid OLTP/OLAP systems that support transactional processing and analytics. HTAP systems offer real-time analytics on operational data and a full perspective of business operations. We can name here: SAP HANA, Oracle Database In-Memory, MemSQL, Google Cloud Bigtable, Microsoft Azure Cosmos DB and Splice Machine.
+- **SELECT** and **FROM** are *clauses*.
+- **col1**, **col2**, **col3**, and **col5** are *columns*.
+- **'abc'**, **'def'**, **'ghi'**, and **10** are literals.
+- **(col4 + 5) * 7** and **AVG(col5)** are expressions.
+- **IN**, **BETWEEN**, and **IS NULL** are predicates.
