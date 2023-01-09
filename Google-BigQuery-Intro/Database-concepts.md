@@ -19,6 +19,7 @@ Several sorts of analytics can be used by businesses to acquire insights from th
 This type of analytics entails examining previously acquired data and summarizing it in a way that facilitates comprehension of what has occurred in the past. This could involve the creation of reports, charts, and graphs to illustrate trends and patterns.
 - **Diagnostic analytics**  
 This type of analytics entails delving deeper into the data to determine the underlying reasons of particular outcomes or events. This can assist organizations in identifying problems or improvement opportunities.  
+- **Predictive analytics**  
 Utilizing data and statistical models, this sort of analytics predicts future outcomes or occurrences. This can aid organizations in planning for the future and making decisions based on probabilities.
 - **Prescriptive analytics**  
 This type of analytics uses data and advanced analytics techniques to not only anticipate what may occur, but also to recommend actions that can be taken to attain a desired outcome.
@@ -30,12 +31,20 @@ One of the most important reasons why businesses require databases is to store a
 
 Here are the steps taken by modern databases from flat files to the present:
 
-- The initial type of database, **flat files** consisted of a single table of data with no relationships to other tables. They were inefficient for storing and retrieving huge volumes of data because they lacked indexing and search capabilities.
+- The initial type of database, **flat files** consisted of a single table of data with no relationships to other tables. They were inefficient for storing and retrieving huge volumes of data because they lacked indexing and search capabilities.  
+Some examples are CSV files, Excel spreadsheets, and text files.
 
-- The next step in the evolution of databases was the development of relational databases. They were created in the 1970s and are based on the relational model, which organizes data into tables with inter-table links. Relational databases are more effective than flat files because they support indexing and searching and permit structured data queries.
+- The next step in the evolution of databases was the development of **relational databases**. They were created in the 1970s and are based on the relational model, which organizes data into tables. Relational databases are more effective than flat files because they support indexing and searching and permit structured data queries.  
+As examples for this category we have MySQL, Oracle, and Microsoft SQL Server.
 
-- NoSQL databases were developed as an alternative to relational databases in the late 1990s and early 2000s. They are designed to manage vast quantities of unstructured data and can extend horizontally across several servers. NoSQL databases are built on a flexible, non-relational data model and are frequently employed for web-scale applications and big data analytics.
+- **NoSQL** databases were developed as an alternative to relational databases in the late 1990s and early 2000s. They are designed to manage vast quantities of unstructured data and can extend horizontally across several servers. NoSQL databases are built on a flexible, non-relational data model and are frequently employed for web-scale applications and big data analytics.  
+In this category are included MongoDB, Cassandra, and Couchbase.
 
-- Big data technologies: The term "big data" refers to the increasing volume, diversity, and velocity of data generated and collected by businesses. To manage and analyze enormous data, a number of big data technologies, such as Hadoop, Spark, and NoSQL databases, have been developed. These technologies enable enterprises to store and process vast quantities of data in a distributed and scalable manner.
+- **Big data technologies**: The term **"big data"** refers to the increasing volume, diversity, and velocity of data generated and collected by businesses. To manage and analyze enormous data, a number of big data technologies, such as Hadoop, Spark, and NoSQL databases, have been developed. These technologies enable enterprises to store and process vast quantities of data in a distributed and scalable manner.  
+Hadoop, Spark, and Apache Flink are examples of the BigData technologies.
 
-- Cloud databases are hosted and managed by a cloud service provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The benefits of cloud databases include scalability, flexibility, and reduced maintenance expenses.
+
+- **Cloud databases** are hosted and managed by a cloud service provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud. The benefits of cloud databases include scalability, flexibility, and reduced maintenance expenses.  
+A few popular cloud database solutions are Amazon DynamoDB, Microsoft Azure Cosmos DB, and Google Cloud Bigtable.
+
+
