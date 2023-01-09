@@ -26,6 +26,20 @@ This course is broken up into:
 - [Using Window Functions](Using-window-functions.md)
 - [Common Table Expressions (CTEs)](Ctes.md)
 
+## Reference
+For details we can use the following links:
+- [Free GCP Trial](https://cloud.google.com/free)  
+- [Get started with the BigQuery sandbox](https://cloud.google.com/bigquery/docs/sandbox) 
+- [Setting up the BigQuery sandbox (video)](https://youtu.be/JLXLCv5nUCE)
+- [Bigquery documentation](https://cloud.google.com/bigquery/docs)  
+- [Google Standard SQL - Data Types](https://cloud.google.com/spanner/docs/reference/standard-sql/data-types)  
+- [Google Standard SQL - Data Definition Language](https://cloud.google.com/spanner/docs/reference/standard-sql/data-definition-language)  
+- [Google Standard SQL - JOIN operator](https://cloud.google.com/spanner/docs/reference/standard-sql/query-syntax#join_types)  
+[Google Standard SQLstring_functions)  
+ - [Query Syntax](https://cloud.google.com/spanner/docs/reference/standard-sql/query-syntax)  
+[Google Standard SQL - String Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/
+
+
 ## License
 
 Except as otherwise noted, the solutions within this repository are provided under the
