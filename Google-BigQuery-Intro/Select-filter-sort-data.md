@@ -5,6 +5,7 @@ The **SELECT** statement is used in Google BigQuery to retrieve data from a tabl
 Content
 - [General Syntax](Select-filter-sort-data.md#general-syntax)
 - [Filter Data](Select-filter-sort-data.md#filter-data)
+- [Sort Data](Select-filter-sort-data.md#sort-data)
 
 ## General Syntax
 
@@ -85,6 +86,8 @@ WHERE _TABLE_SUFFIX BETWEEN '20170701' AND '20170731'
 ```
 This SELECT statement would retrieve all fields from the tables in the **ga_sessions_***  wildcard table in the **google_analytics_sample** dataset in the **bigquery-public-data** project, where the table suffix is between **'20170701'** and **'20170731'**. This would return data for the month of **July 2017**.
 
+
+
 ```sql
 SELECT *
 FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
@@ -100,4 +103,35 @@ WHERE trafficSource.source IN ('google', 'bing', 'yahoo')
 ```
 
 This SELECT statement would retrieve all fields from the tables in the **ga_sessions_*** wildcard table in the **google_analytics_sample** dataset in the **bigquery-public-data** project, where the traffic source is either **'google'**, **'bing'**, or **'yahoo'**. This would return data for sessions from these search engines.
+
+## Sort Data
+Sorting results can be done using the **ORDER BY** clause.
+
+The ORDER BY clause specifies a column or expression as the result set's sort criterion. The order of a query's results is not defined if an ORDER BY clause is not present. Column aliases from the FROM clause or the SELECT list are permitted. Aliases in the SELECT clause of a query take precedence over names in the corresponding FROM clause.  
+The expression's data type must be orderable (all data types except ARRAY, STRUCT, GEOGRAPHY and JSON).
+
+Some examples of using the ORDER BY clause with the Google Analytics sample dataset in BigQuery are:
+
+- Sort the results of the ga_sessions_* table by the date column in ascending order:
+```SQL
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+ORDER BY date ASC
+```
+- Sort the results of the ga_sessions_* table by the deviceCategory column in descending order, for rows where the totals.visits is greater than 1:
+```SQL
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+WHERE totals.visits > 1
+ORDER BY deviceCategory DESC
+```
+- Sort the results of the ga_sessions_* table by the totals.bounces column in ascending order, and then by the totals.hits column in descending order, and return the first 10 rows of the sorted results:
+```SQL
+SELECT *
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+ORDER BY totals.bounces ASC, totals.hits DESC
+LIMIT 10
+```
+
+
 
