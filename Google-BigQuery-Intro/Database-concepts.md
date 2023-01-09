@@ -60,6 +60,15 @@ For instance, SQL can be used to:
 - Count the amount of orders each customer has placed.
 - Update the price of a product across all stores in a region.
 
+#### SQL Elements
+
+- **Statement**: A statement is a command or request written in SQL. Examples of SQL statements include SELECT, INSERT, UPDATE, and DELETE.
+- **Expression:** An expression is a combination of one or more values, operators, and SQL functions that evaluates to a value. For example, the expression **(col1 + col2) * col3** includes the values of three columns (col1, col2, and col3), the addition operator (+), and the multiplication operator (*).
+- **Column:** A column is a field or attribute in a database table. Each row in a table has a value for each column.
+- **Literal:** A literal is a fixed value that is included in an SQL statement. Literals can be of various data types, including NULL, string, and numeric.
+- **Clause:** A clause is a part of an SQL statement that performs a specific task. There are several types of clauses in SQL, including SELECT, FROM, WHERE, and GROUP BY. Each clause performs a specific function in an SQL statement and can be used to filter or modify the data being queried.
+- **Predicate**: A predicate is a Boolean expression that evaluates to either TRUE or FALSE. In SQL, predicates are often used in the WHERE clause of a SELECT, UPDATE, or DELETE statement to filter the rows being returned or modified.  
+For example, the predicate col1 = 'abc' will evaluate to TRUE for rows where the value of col1 is 'abc', and FALSE for all other rows. The predicate col2 BETWEEN 10 AND 100 will evaluate to TRUE for rows where the value of col2 is between 10 and 100, and FALSE for all other rows.
 
 ```sql
   SELECT col1, col2, col3, (col4 + 5) * 7 AS col5
@@ -69,6 +78,16 @@ For instance, SQL can be used to:
   GROUP BY col4, col5
   HAVING AVG(col5) > 10
 ```
+
+In this example:
+- SELECT and FROM are clauses.
+- col1, col2, col3, and col5 are columns.
+- 'abc', 'def', 'ghi', and 10 are literals.
+- (col4 + 5) * 7 and AVG(col5) are expressions.
+- IN, BETWEEN, and IS NULL are predicates.
+
+
+
 
 ## OLTP, OLAP and HTAP
 
