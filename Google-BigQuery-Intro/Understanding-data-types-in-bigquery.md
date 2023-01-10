@@ -16,12 +16,13 @@ BigQuery supports the following key data types:
 
 The following example is using the declaration of several variables to ilustrate the use of data types:
 ```sql
--- Declare a variable with type parameters.
+-- Declare a STRING variable
 DECLARE x STRING(6);
 -- A valid assignment to x.
 SET x = "hello";
 -- OUT_OF_RANGE error.
 SET x = "hello world";
 
-
+-- Declare a NUMERIC variable
+DECLARE y NUMERIC(5, 2) DEFAULT 123.45;
 ```
