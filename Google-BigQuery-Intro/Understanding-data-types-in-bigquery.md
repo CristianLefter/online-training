@@ -13,3 +13,15 @@ BigQuery supports the following key data types:
 - **DATE**: A DATE value represents a calendar date, with no time component.
 - **TIME**: A TIME value represents a time of day, with no date component.
 - **DATETIME**: A DATETIME value represents a point in time, independent of any time zone, including both date and time components.
+
+The following example is using the declaration of several variables to ilustrate the use of data types:
+```sql
+-- Declare a variable with type parameters.
+DECLARE x STRING(6);
+-- A valid assignment to x.
+SET x = "hello";
+-- OUT_OF_RANGE error.
+SET x = "hello world";
+
+
+```
