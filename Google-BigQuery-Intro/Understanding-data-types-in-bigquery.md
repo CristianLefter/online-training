@@ -3,16 +3,17 @@
 It is essential to have a thorough understanding of Google BigQuery data types in order to fully utilize the tool's on-demand capabilities and features.
 
 BigQuery supports the following key data types:
-- **NULL**: A NULL value represents a missing or unknown value.
-- **INTEGER**: An INTEGER value represents a signed 32-bit integer.
-- **FLOAT**: A FLOAT value represents a signed double-precision floating-point number.
-- **BOOLEAN**: A BOOLEAN value represents a True or False value.
-- **STRING**: A STRING value represents a sequence of Unicode characters.
-- **BYTES**: A BYTES value represents a sequence of bytes.
-- **TIMESTAMP**: A TIMESTAMP value represents a point in time, independent of any time zone.
-- **DATE**: A DATE value represents a calendar date, with no time component.
-- **TIME**: A TIME value represents a time of day, with no date component.
-- **DATETIME**: A DATETIME value represents a point in time, independent of any time zone, including both date and time components.
+- **INTEGER**: This is a signed 64-bit integer type. Examples of values: 1, -5, 0.
+- **FLOAT**: This is a double-precision floating-point number. Examples of values: 3.14, -0.01, 0.0.
+- **BOOLEAN**: This is a type with two possible values: TRUE or FALSE.
+- **STRING**: This is a sequence of characters, such as "hello", "world", or "foo".
+- **BYTES**: This is a sequence of bytes, represented as a base-64 string.
+- **TIMESTAMP**: This is a type for storing a single point in time, with up to nanosecond precision. Examples of values: "2022-01-01 00:00:00", "2022-12-31 23:59:59.999999999".
+- **DATE**: This is a type for storing a calendar date (year, month, and day) without a time. Examples of values: "2022-01-01", "1900-01-01".
+- **TIME**: This is a type for storing a time of day (hour, minute, second, and subsecond). Examples of values: "12:34:01", "00:00:00.123456".
+- **DATETIME**: This is a type for storing a date and time value. It is a combination of the DATE and TIME types. Examples of values: "2022-01-01 12:34:01", "1900-01-01 00:00:00".
+- **ARRAY**: This is a type for storing an ordered list of values. Example of value: [1, 2, 3]
+- **STRUCT**: This is a type for storing a nested record with a set of named fields. Example of value: {"x": 1, "y": 2}
 
 The following example is using the declaration of several variables to ilustrate the use of data types:
 ```sql
