@@ -4,7 +4,7 @@ We occasionally require data summaries. For example, we may need to know the tot
 Some examples of aggregate functions that we can use in Google BigQuery:
 
 - COUNT: This function counts the number of rows in a table or column. For example, you can use the following query to count the number of rows in the "bigquery-public-data.samples.natality" table:
-- 
+
 ```sql
 SELECT COUNT(*) FROM `bigquery-public-data.samples.natality`
 ```
