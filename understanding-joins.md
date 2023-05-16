@@ -6,13 +6,13 @@ In this case study, we illustrate the process of denormalizing and normalizing t
 
 Initially, we have a denormalized table named "StudentCity". The table looks like this:
 
-| StudentID | StudentName | CityID | CityName |
-|-----------|-------------|--------|----------|
-| 1         | John        | 100    | New York |
-| 2         | Jane        | 200    | London   |
-| 3         | Bob         | 300    | Paris    |
-| 4         | Alice       | 100    | New York |
-| 5         | Steve       | 200    | London   |
+| StudentID | StudentName | CityName |
+|-----------|-------------|----------|
+| 1         | John        |  New York |
+| 2         | Jane        |  London   |
+| 3         | Bob         |  Paris    |
+| 4         | Alice       |  New York |
+| 5         | Steve       |  London   |
 
 In this table, we have redundancy. For example, the cities 'New York' and 'London' are repeated.
 
