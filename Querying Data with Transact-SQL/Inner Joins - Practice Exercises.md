@@ -91,6 +91,7 @@ select p.FirstName
 	  on soh.CustomerID = c.CustomerID
   join Person.Person p
     on p.BusinessEntityID = c.PersonID
+ where p.PersonType = 'IN'
 ```
 
 ### Exercise 02: Retrieve the product names and corresponding categories
