@@ -62,6 +62,101 @@ The final table looks like this:
    from employees emp
   order by Department
 ```
+Examples using TSQL sample database.
+
+```sql
+
+    use TSQL;
+	 go
+ 
+ select top 1 productid
+      , totalqty
+   from (
+          select productid
+               , sum(qty) as totalqty
+            from Sales.OrderDetails 
+           group by productid
+        ) as dt
+  order by totalqty desc;
+    
+ select dt2.productname
+      , dt1.totalqty
+   from (
+          select productid
+	       , sum(qty) as totalqty
+	    from Sales.OrderDetails 
+	   group by productid
+        ) as dt1
+   join (
+          select productid,productname
+	    from Production.Products
+	) as dt2
+     on dt1.productid = dt2.productid
+
+ select p.productname
+      , dt1.totalqty
+   from (
+          select productid
+               , sum(qty) totalqty
+            from Sales.OrderDetails 
+           group by productid
+        ) dt1
+   join Production.Products p
+     on dt1.productid = p.productid
+
+ select productname
+      , minprice
+      , maxprice
+   from ( 
+          select productid
+               , min(unitprice) as minprice
+	       , max(unitprice) as maxprice
+            from Sales.OrderDetails 
+           group by productid 
+        ) as dt
+   join Production.Products p
+    on dt.productid = p.productid
+ where dt.minprice <> dt.maxprice
+  
+ select productid
+      , count(distinct unitprice) as nmbprices
+   from Sales.OrderDetails 
+  group by productid
+ having count(distinct unitprice)>1
+ 
+ select c.companyname
+      , count(o.orderid) as NmbOrders
+   from Sales.Customers c
+   join Sales.Orders o
+    on c.custid = o.custid
+  group by c.custid
+ having count(o.orderid) >= 10
+
+ select c.companyname
+      , nmborders
+   from (
+	  select custid
+	       , count(orderid) as nmborders
+            from Sales.Orders 	
+	   group by custid
+	  having count(orderid) >= 10
+	) as dt
+   join Sales.Customers c
+     on dt.custid = c.custid
+
+ select c.companyname
+      , nmborders
+   from (
+	  select custid
+	      , count(orderid) as nmborders
+           from Sales.Orders 	
+          group by custid	
+	) dt
+   join Sales.Customers c
+     on dt.custid = c.custid
+  where nmborders >= 10
+
+```
 
 
 ### Exercise 01: Retrieve All Orders for Individual Customers
