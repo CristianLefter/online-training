@@ -177,3 +177,157 @@ GROUP BY s.state;
     - **Question**: How can you get detailed information on which books each store has sold, including the quantity and sales amount?
     - **Hint**: Join `stores`, `sales`, and `titles` tables and include the sales quantity and calculated sales amount.
 
+
+## Solutions for Students
+
+### Understanding the Schema
+
+1. **Authors and Their Books**:
+    - **Solution**: 
+    ```sql
+    SELECT a.au_id, a.au_fname, a.au_lname, t.title
+    FROM authors a
+    JOIN titleauthor ta ON a.au_id = ta.au_id
+    JOIN titles t ON ta.title_id = t.title_id;
+    ```
+
+2. **Books and Their Publishers**:
+    - **Solution**: 
+    ```sql
+    SELECT t.title, p.pub_name
+    FROM titles t
+    JOIN publishers p ON t.pub_id = p.pub_id;
+    ```
+
+3. **Stores and Their Sales**:
+    - **Solution**: 
+    ```sql
+    SELECT s.stor_name, t.title
+    FROM stores s
+    JOIN sales sa ON s.stor_id = sa.stor_id
+    JOIN titles t ON sa.title_id = t.title_id;
+    ```
+
+4. **Authors and Publishers**:
+    - **Solution**: 
+    ```sql
+    SELECT a.au_fname, a.au_lname, p.pub_name
+    FROM authors a
+    JOIN titleauthor ta ON a.au_id = ta.au_id
+    JOIN titles t ON ta.title_id = t.title_id
+    JOIN publishers p ON t.pub_id = p.pub_id;
+    ```
+
+5. **Books Without Authors**:
+    - **Solution**: 
+    ```sql
+    SELECT t.title, a.au_fname, a.au_lname
+    FROM titles t
+    LEFT JOIN titleauthor ta ON t.title_id = ta.title_id
+    LEFT JOIN authors a ON ta.au_id = a.au_id;
+    ```
+
+### Analytical Questions
+
+1. **Top-Selling Titles**:
+    - **Solution**: 
+    ```sql
+    SELECT t.title, SUM(sa.qty) AS TotalQuantitySold
+    FROM titles t
+    JOIN sales sa ON t.title_id = sa.title_id
+    GROUP BY t.title
+    ORDER BY TotalQuantitySold DESC;
+    ```
+
+2. **Author Productivity**:
+    - **Solution**: 
+    ```sql
+    SELECT a.au_fname, a.au_lname, COUNT(t.title_id) AS NumberOfBooks
+    FROM authors a
+    JOIN titleauthor ta ON a.au_id = ta.au_id
+    JOIN titles t ON ta.title_id = t.title_id
+    GROUP BY a.au_fname, a.au_lname
+    HAVING COUNT(t.title_id) > 1;
+    ```
+
+3. **Revenue by Publisher**:
+    - **Solution**: 
+    ```sql
+    SELECT p.pub_name, SUM(sa.qty * t.price) AS TotalRevenue
+    FROM publishers p
+    JOIN titles t ON p.pub_id = t.pub_id
+    JOIN sales sa ON t.title_id = sa.title_id
+    GROUP BY p.pub_name;
+    ```
+
+4. **Store Performance**:
+    - **Solution**: 
+    ```sql
+    SELECT s.stor_name, SUM(sa.qty * t.price) AS TotalSales
+    FROM stores s
+    JOIN sales sa ON s.stor_id = sa.stor_id
+    JOIN titles t ON sa.title_id = t.title_id
+    GROUP BY s.stor_name;
+    ```
+
+5. **Regional Sales Distribution**:
+    - **Solution**: 
+    ```sql
+    SELECT s.state, SUM(sa.qty * t.price) AS TotalSales
+    FROM stores s
+    JOIN sales sa ON s.stor_id = sa.stor_id
+    JOIN titles t ON sa.title_id = t.title_id
+    GROUP BY s.state;
+    ```
+
+### Advanced Questions
+
+1. **Multiple Authors and Titles**:
+    - **Solution**: 
+    ```sql
+    SELECT t.title, COUNT(ta.au_id) AS NumberOfAuthors
+    FROM titleauthor ta
+    JOIN titles t ON ta.title_id = t.title_id
+    GROUP BY t.title
+    HAVING COUNT(ta.au_id) > 1;
+    ```
+
+2. **Publisher's Best-Selling Titles**:
+    - **Solution**: 
+    ```sql
+    SELECT p.pub_name, t.title, MAX(sa.qty) AS MaxSales
+    FROM publishers p
+    JOIN titles t ON p.pub_id = t.pub_id
+    JOIN sales sa ON t.title_id = sa.title_id
+    GROUP BY p.pub_name, t.title;
+    ```
+
+3. **Monthly Sales Trends**:
+    - **Solution**: 
+    ```sql
+    SELECT s.stor_name, YEAR(sa.ord_date) AS Year, MONTH(sa.ord_date) AS Month, SUM(sa.qty * t.price) AS TotalSales
+    FROM stores s
+    JOIN sales sa ON s.stor_id = sa.stor_id
+    JOIN titles t ON sa.title_id = t.title_id
+    GROUP BY s.stor_name, YEAR(sa.ord_date), MONTH(sa.ord_date);
+    ```
+
+4. **Sales by Author**:
+    - **Solution**: 
+    ```sql
+    SELECT a.au_fname, a.au_lname, SUM(sa.qty * t.price) AS TotalSales
+    FROM authors a
+    JOIN titleauthor ta ON a.au_id = ta.au_id
+    JOIN titles t ON ta.title_id = t.title_id
+    JOIN sales sa ON t.title_id = sa.title_id
+    GROUP BY a.au_fname, a.au_lname;
+    ```
+
+5. **Store and Book Sales Details**:
+    - **Solution**: 
+    ```sql
+    SELECT s.stor_name, t.title, sa.qty, sa.qty * t.price AS SalesAmount
+    FROM stores s
+    JOIN sales sa ON s.stor_id = sa.stor_id
+    JOIN titles t ON sa.title_id = t.title_id;
+    ```
