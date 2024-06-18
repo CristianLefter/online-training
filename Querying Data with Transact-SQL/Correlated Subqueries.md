@@ -66,95 +66,88 @@ Examples using TSQL sample database.
 
 ```sql
 
-    use TSQL;
-	 go
- 
- select top 1 productid
-      , totalqty
-   from (
-          select productid
-               , sum(qty) as totalqty
-            from Sales.OrderDetails 
-           group by productid
-        ) as dt
-  order by totalqty desc;
-    
- select dt2.productname
-      , dt1.totalqty
-   from (
-          select productid
-	       , sum(qty) as totalqty
-	    from Sales.OrderDetails 
-	   group by productid
-        ) as dt1
-   join (
-          select productid,productname
-	    from Production.Products
-	) as dt2
-     on dt1.productid = dt2.productid
+-- Change database context
+USE TSQL;
+GO
 
- select p.productname
-      , dt1.totalqty
-   from (
-          select productid
-               , sum(qty) totalqty
-            from Sales.OrderDetails 
-           group by productid
-        ) dt1
-   join Production.Products p
-     on dt1.productid = p.productid
+-- Find the product ID with the highest total quantity sold
+SELECT TOP 1 productid, totalqty
+FROM (
+    SELECT productid, SUM(qty) AS totalqty
+    FROM Sales.OrderDetails 
+    GROUP BY productid
+) AS dt
+ORDER BY totalqty DESC;
 
- select productname
-      , minprice
-      , maxprice
-   from ( 
-          select productid
-               , min(unitprice) as minprice
-	       , max(unitprice) as maxprice
-            from Sales.OrderDetails 
-           group by productid 
-        ) as dt
-   join Production.Products p
-    on dt.productid = p.productid
- where dt.minprice <> dt.maxprice
-  
- select productid
-      , count(distinct unitprice) as nmbprices
-   from Sales.OrderDetails 
-  group by productid
- having count(distinct unitprice)>1
- 
- select c.companyname
-      , count(o.orderid) as NmbOrders
-   from Sales.Customers c
-   join Sales.Orders o
-    on c.custid = o.custid
-  group by c.custid
- having count(o.orderid) >= 10
+-- List product names along with their total quantities sold
+SELECT dt2.productname, dt1.totalqty
+FROM (
+    SELECT productid, SUM(qty) AS totalqty
+    FROM Sales.OrderDetails 
+    GROUP BY productid
+) AS dt1
+JOIN (
+    SELECT productid, productname
+    FROM Production.Products
+) AS dt2
+ON dt1.productid = dt2.productid;
 
- select c.companyname
-      , nmborders
-   from (
-	  select custid
-	       , count(orderid) as nmborders
-            from Sales.Orders 	
-	   group by custid
-	  having count(orderid) >= 10
-	) as dt
-   join Sales.Customers c
-     on dt.custid = c.custid
+-- Another way to select the product names along with their total quantities sold
+SELECT p.productname, dt1.totalqty
+FROM (
+    SELECT productid, SUM(qty) AS totalqty
+    FROM Sales.OrderDetails 
+    GROUP BY productid
+) dt1
+JOIN Production.Products p
+ON dt1.productid = p.productid;
 
- select c.companyname
-      , nmborders
-   from (
-	  select custid
-	      , count(orderid) as nmborders
-           from Sales.Orders 	
-          group by custid	
-	) dt
-   join Sales.Customers c
-     on dt.custid = c.custid
-  where nmborders >= 10
+-- Select product names along with their minimum and maximum prices, but only for products with different min and max prices
+SELECT productname, minprice, maxprice
+FROM (
+    SELECT productid, MIN(unitprice) AS minprice, MAX(unitprice) AS maxprice
+    FROM Sales.OrderDetails 
+    GROUP BY productid 
+) AS dt
+JOIN Production.Products p
+ON dt.productid = p.productid
+WHERE dt.minprice <> dt.maxprice;
+
+-- Find products that have been sold at more than one distinct price
+SELECT productid, COUNT(DISTINCT unitprice) AS nmbprices
+FROM Sales.OrderDetails 
+GROUP BY productid
+HAVING COUNT(DISTINCT unitprice) > 1;
+
+-- Select company names of customers who have made at least 10 orders
+SELECT c.companyname, COUNT(o.orderid) AS NmbOrders
+FROM Sales.Customers c
+JOIN Sales.Orders o
+ON c.custid = o.custid
+GROUP BY c.custid
+HAVING COUNT(o.orderid) >= 10;
+
+-- Another way to select company names of customers who have made at least 10 orders
+SELECT c.companyname, nmborders
+FROM (
+    SELECT custid, COUNT(orderid) AS nmborders
+    FROM Sales.Orders 	
+    GROUP BY custid
+    HAVING COUNT(orderid) >= 10
+) AS dt
+JOIN Sales.Customers c
+ON dt.custid = c.custid;
+
+-- Yet another way to select company names of customers who have made at least 10 orders
+SELECT c.companyname, nmborders
+FROM (
+    SELECT custid, COUNT(orderid) AS nmborders
+    FROM Sales.Orders 	
+    GROUP BY custid	
+) dt
+JOIN Sales.Customers c
+ON dt.custid = c.custid
+WHERE nmborders >= 10;
 
 ```
 
