@@ -51,6 +51,8 @@ Write a query to select all products that are in stock and belong to the 'Electr
 
 Update the price of the product with ProductID 2 to 69.99.
 
+## Exercise 10: Deleting Data from Products
+Delete all products that are not in stock.
 
 # Solutions
 
