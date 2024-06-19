@@ -136,4 +136,153 @@ DELETE FROM Products
 WHERE InStock = 0;
 ```
 
+# Part II - Additional T-SQL Data Types Practice Exercises
+
+## Exercise 11: Creating a Table with Various Data Types
+
+Create a table named `Orders` with the following columns:
+- `OrderID` (INT, Primary Key)
+- `CustomerID` (INT)
+- `OrderDate` (DATETIME)
+- `TotalAmount` (DECIMAL(10, 2))
+- `Status` (VARCHAR(20))
+
+## Exercise 12: Inserting Data into Orders
+
+Insert the following data into the `Orders` table:
+- OrderID: 1, CustomerID: 101, OrderDate: 2023-05-10 14:30:00, TotalAmount: 250.75, Status: 'Shipped'
+- OrderID: 2, CustomerID: 102, OrderDate: 2023-06-15 09:00:00, TotalAmount: 99.99, Status: 'Pending'
+
+## Exercise 13: Querying Data with Date Range
+
+Write a query to select all orders placed between June 1, 2023, and June 30, 2023.
+
+## Exercise 14: Updating Order Status
+
+Update the status of the order with OrderID 2 to 'Shipped'.
+
+## Exercise 15: Deleting Orders
+
+Delete all orders where the total amount is less than 100.00.
+
+## Exercise 16: Creating a Table with NULL Values
+
+Create a table named `Departments` with the following columns:
+- `DepartmentID` (INT, Primary Key)
+- `DepartmentName` (VARCHAR(50))
+- `ManagerID` (INT, Nullable)
+
+## Exercise 17: Inserting Data with NULL Values
+
+Insert the following data into the `Departments` table:
+- DepartmentID: 1, DepartmentName: 'HR', ManagerID: NULL
+- DepartmentID: 2, DepartmentName: 'IT', ManagerID: 5
+
+## Exercise 18: Querying Data with NULL Values
+
+Write a query to select all departments where the `ManagerID` is NULL.
+
+## Exercise 19: Using the UNIQUE Constraint
+
+Create a table named `Categories` with the following columns:
+- `CategoryID` (INT, Primary Key)
+- `CategoryName` (VARCHAR(50), Unique)
+
+## Exercise 20: Inserting Data into Categories
+
+Insert the following data into the `Categories` table:
+- CategoryID: 1, CategoryName: 'Electronics'
+- CategoryID: 2, CategoryName: 'Appliances'
+- CategoryID: 3, CategoryName: 'Electronics' (This should result in an error due to the UNIQUE constraint)
+
+
+# Solutions to Additional T-SQL Data Types Practice Exercises
+
+## Exercise 11: Creating a Table with Various Data Types
+
+```sql
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATETIME,
+    TotalAmount DECIMAL(10, 2),
+    Status VARCHAR(20)
+);
+```
+
+## Exercise 12: Inserting Data into Orders
+
+```sql
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, Status)
+VALUES (1, 101, '2023-05-10 14:30:00', 250.75, 'Shipped');
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, Status)
+VALUES (2, 102, '2023-06-15 09:00:00', 99.99, 'Pending');
+```
+
+## Exercise 13: Querying Data with Date Range
+```sql
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN '2023-06-01' AND '2023-06-30';
+```
+
+## Exercise 14: Updating Order Status
+```sql
+UPDATE Orders
+SET Status = 'Shipped'
+WHERE OrderID = 2;
+```
+
+## Exercise 15: Deleting Orders
+```sql
+DELETE FROM Orders
+WHERE TotalAmount < 100.00;
+```
+
+## Exercise 16: Creating a Table with NULL Values
+```sql
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50),
+    ManagerID INT NULL
+);
+```
+
+## Exercise 17: Inserting Data with NULL Values
+```sql
+INSERT INTO Departments (DepartmentID, DepartmentName, ManagerID)
+VALUES (1, 'HR', NULL);
+
+INSERT INTO Departments (DepartmentID, DepartmentName, ManagerID)
+VALUES (2, 'IT', 5);
+```
+
+## Exercise 18: Querying Data with NULL Values
+```sql
+SELECT * FROM Departments
+WHERE ManagerID IS NULL;
+```
+
+## Exercise 19: Using the UNIQUE Constraint
+```sql
+CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY,
+    CategoryName VARCHAR(50) UNIQUE
+);
+
+```
+
+## Exercise 20: Inserting Data into Categories
+```sql
+INSERT INTO Categories (CategoryID, CategoryName)
+VALUES (1, 'Electronics');
+
+INSERT INTO Categories (CategoryID, CategoryName)
+VALUES (2, 'Appliances');
+
+-- This will result in an error due to the UNIQUE constraint
+INSERT INTO Categories (CategoryID, CategoryName)
+VALUES (3, 'Electronics');
+```
+
 
