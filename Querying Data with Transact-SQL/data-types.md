@@ -51,6 +51,89 @@ Write a query to select all products that are in stock and belong to the 'Electr
 
 Update the price of the product with ProductID 2 to 69.99.
 
-## Exercise 10: Deleting Data from Products
 
-Delete all products that are not in stock.
+# Solutions
+
+## Exercise 1: Creating a Table
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE,
+    HireDate DATE,
+    Salary DECIMAL(10, 2)
+);
+```
+## Exercise 2: Inserting Data
+
+```sql
+INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, HireDate, Salary)
+VALUES (1, 'John', 'Doe', '1980-01-15', '2010-05-23', 50000.00);
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, HireDate, Salary)
+VALUES (2, 'Jane', 'Smith', '1985-07-30', '2012-09-17', 60000.00);
+```
+
+## Exercise 3: Querying Data
+
+```sql
+SELECT * FROM Employees
+WHERE HireDate > '2011-01-01';
+```
+
+## Exercise 4: Updating Data
+
+```sql
+UPDATE Employees
+SET Salary = 55000.00
+WHERE EmployeeID = 1;
+```
+
+## Exercise 5: Deleting Data
+```sql
+DELETE FROM Employees
+WHERE EmployeeID = 2;
+```
+
+## Exercise 6: Using Different Data Types
+```sql
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(8, 2),
+    InStock BIT
+);
+```
+
+## Exercise 7: Inserting Data into Products
+```sql
+INSERT INTO Products (ProductID, ProductName, Category, Price, InStock)
+VALUES (1, 'Laptop', 'Electronics', 999.99, 1);
+
+INSERT INTO Products (ProductID, ProductName, Category, Price, InStock)
+VALUES (2, 'Coffee Maker', 'Appliances', 79.99, 0);
+```
+
+## Exercise 8: Querying with Conditions
+```sql
+SELECT * FROM Products
+WHERE InStock = 1 AND Category = 'Electronics';
+```
+
+## Exercise 9: Updating Data in Products
+```sql
+UPDATE Products
+SET Price = 69.99
+WHERE ProductID = 2;
+```
+
+## Exercise 10: Deleting Data from Products
+```sql
+DELETE FROM Products
+WHERE InStock = 0;
+```
+
+
