@@ -1,0 +1,56 @@
+# T-SQL Data Types Practice Exercises
+
+## Exercise 1: Creating a Table
+
+Create a table named `Employees` with the following columns:
+- `EmployeeID` (INT, Primary Key)
+- `FirstName` (VARCHAR(50))
+- `LastName` (VARCHAR(50))
+- `BirthDate` (DATE)
+- `HireDate` (DATE)
+- `Salary` (DECIMAL(10, 2))
+
+## Exercise 2: Inserting Data
+
+Insert the following data into the `Employees` table:
+- EmployeeID: 1, FirstName: John, LastName: Doe, BirthDate: 1980-01-15, HireDate: 2010-05-23, Salary: 50000.00
+- EmployeeID: 2, FirstName: Jane, LastName: Smith, BirthDate: 1985-07-30, HireDate: 2012-09-17, Salary: 60000.00
+
+## Exercise 3: Querying Data
+
+Write a query to select all employees who were hired after January 1, 2011.
+
+## Exercise 4: Updating Data
+
+Update the salary of the employee with EmployeeID 1 to 55000.00.
+
+## Exercise 5: Deleting Data
+
+Delete the employee with EmployeeID 2.
+
+## Exercise 6: Using Different Data Types
+
+Create a table named `Products` with the following columns:
+- `ProductID` (INT, Primary Key)
+- `ProductName` (VARCHAR(100))
+- `Category` (VARCHAR(50))
+- `Price` (DECIMAL(8, 2))
+- `InStock` (BIT)
+
+## Exercise 7: Inserting Data into Products
+
+Insert the following data into the `Products` table:
+- ProductID: 1, ProductName: Laptop, Category: Electronics, Price: 999.99, InStock: 1
+- ProductID: 2, ProductName: Coffee Maker, Category: Appliances, Price: 79.99, InStock: 0
+
+## Exercise 8: Querying with Conditions
+
+Write a query to select all products that are in stock and belong to the 'Electronics' category.
+
+## Exercise 9: Updating Data in Products
+
+Update the price of the product with ProductID 2 to 69.99.
+
+## Exercise 10: Deleting Data from Products
+
+Delete all products that are not in stock.
