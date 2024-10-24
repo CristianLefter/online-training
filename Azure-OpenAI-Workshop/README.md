@@ -3,7 +3,7 @@
 This repository contains resources related to the Azure OpenAI Workshop.
 
 **Contents:**
-* [Resources](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/explore-azure-ai-services-curated-list-of-prebuilt-models-and/ba-p/4230788) - [Azure AI services provide a comprehensive suite of prebuilt models and demos designed to address a wide range of use cases. ]
+* [Resources](resources.md) - Links and documentation
 
 
 **Contributing:**
