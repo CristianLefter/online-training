@@ -55,6 +55,6 @@ Include key words or phrases that influence the AI’s focus, tone, or style.
 By thoughtfully combining these components, you can guide the AI to deliver responses that are not only insightful but also closely aligned with your unique requirements.
 
 ### Reference
-[https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering?tabs=chat](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering?tabs=chat)
+[Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering?tabs=chat)
 
 
