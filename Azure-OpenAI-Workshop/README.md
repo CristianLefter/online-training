@@ -3,6 +3,7 @@
 This repository contains resources related to the Azure OpenAI Workshop.
 
 **Contents:**
+* [Prompt design for GenAI](prompt-design.md) - Prompt design techniques
 * [Resources](resources.md) - Links and documentation
 
 
