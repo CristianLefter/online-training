@@ -1,13 +1,62 @@
-# Glossary
+# Azure OpenAI Glossary
 
-* deployment
-* **embedding** is a special format of data representation that can be easily utilized by machine learning models and algorithms. The embedding is an information dense representation of the semantic meaning of a piece of text. Each embedding is a vector of floating point numbers, such that the distance between two embeddings in the vector space is correlated with semantic similarity between two inputs in the original format. For example, if two texts are similar, then their vector representations should also be similar.
-* **epoch** - In the context of machine learning and particularly in neural network training, the term epoch represents a fundamental concept. An epoch refers to one complete pass of the entire training dataset through the learning algorithm. In other words, when all the data samples have been exposed to the neural network for learning patterns, one epoch is said to be completed.
-* **fine-tuning** - retrains an existing Large Language Model using example data, resulting in a new "custom" Large Language Model that has been optimized using the provided examples.
-* model
-* prompt
-* **prompt engineering** - is a technique that involves designing prompts for natural language processing models. This process improves accuracy and relevancy in responses, optimizing the performance of the model
-* Reinforcement Learning through Human Feedback (RLHF) 
-* **retrieval augmented generation (RAG)** - improves Large Language Model (LLM) performance by retrieving data from external sources and incorporating it into a prompt. RAG allows businesses to achieve customized solutions while maintaining data relevance and optimizing costs.
-* **temperature** - Controls randomness. Lowering the temperature means that the model produces more repetitive and deterministic responses. Increasing the temperature results in more unexpected or creative responses. 
-* **top probabilities (Top P)** - Similar to temperature, this controls randomness but uses a different method. Lowering Top P narrows the model’s token selection to likelier tokens. 
+### Deployment
+Setting up a model or application on Azure for use, allowing it to be accessed by specific applications or users.
+
+### Embedding
+A way of representing data (like text) as dense, information-rich vectors (arrays of numbers) that capture the meaning of the data. In this format, similar texts have similar vectors, making it easy for AI models to understand relationships and similarities between different pieces of text.
+
+### Epoch
+One full cycle through the entire training dataset during model training. In each epoch, the model learns patterns from all data points.
+
+### Fine-Tuning
+The process of further training a pre-existing Large Language Model (LLM) using custom data to create a more specialized version that performs better on specific tasks.
+
+### Model
+The core AI system that generates responses, processes data, or performs specific tasks. In Azure OpenAI, models can include language models like GPT-3 or Codex.
+
+### Prompt
+A piece of text or input given to the model to instruct it on what kind of response to generate.
+
+### Prompt Engineering
+The process of designing effective prompts to get accurate and relevant responses from a model. This technique optimizes model performance for specific tasks.
+
+### Reinforcement Learning through Human Feedback (RLHF)
+A training method where human preferences are used to guide the model, making its responses more aligned with what people want or expect.
+
+### Retrieval-Augmented Generation (RAG)
+A technique where the model retrieves relevant external information to improve response quality. This keeps responses accurate and cost-effective, especially when specialized knowledge is required.
+
+### Temperature
+A setting that controls how random or creative the model’s responses are. Lower temperatures make responses more predictable, while higher temperatures increase randomness and creativity.
+
+### Top Probabilities (Top P)
+A setting to control randomness by narrowing token selection to the most likely options. Lowering Top P makes the model focus on higher-probability words, making responses more predictable.
+
+---
+
+### Additional Terms
+
+### API (Application Programming Interface)
+A set of rules and tools for software to communicate with other software. In Azure OpenAI, APIs allow applications to interact with language models.
+
+### Token
+A unit of text, often a word or part of a word, that the model processes individually. Tokens help in understanding the input length and cost of model usage.
+
+### Latency
+The time delay between sending a request and receiving a response from the model. Lower latency means faster response times.
+
+### Endpoint
+A specific URL on Azure where requests are sent to access an AI model. Endpoints make it easy to connect applications to Azure OpenAI.
+
+### Transformer
+A machine learning architecture that powers many language models, like GPT, enabling them to understand and generate human-like text.
+
+### Zero-shot, One-shot, and Few-shot Learning
+Methods for providing examples in prompts:
+- **Zero-shot**: The model has no example of the task and must infer it.
+- **One-shot**: The model is given one example to understand the task.
+- **Few-shot**: The model is given a few examples to clarify the task.
+
+### Azure Cognitive Services
+A suite of tools on Azure for adding AI capabilities to applications, including language, vision, and decision-making models.
