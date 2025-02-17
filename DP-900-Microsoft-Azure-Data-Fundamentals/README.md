@@ -38,6 +38,53 @@ This repository provides structured learning materials and exercises for **DP-90
 │   ├── 📜 03-synapse-exercises.md
 ```
 
+### Project Structure
+
+#### 📜 [README.md](README.md)
+#### 📜 [CONTRIBUTING.md](CONTRIBUTING.md)
+#### 📜 [LICENSE](LICENSE)
+
+---
+
+### 📂 01-Core-Data-Concepts
+- 📜 [01-data-fundamentals.md](01-Core-Data-Concepts/01-data-fundamentals.md)
+- 📜 [02-types-of-data.md](01-Core-Data-Concepts/02-types-of-data.md)
+- 📜 [03-data-characteristics.md](01-Core-Data-Concepts/03-data-characteristics.md)
+
+---
+
+### 📂 02-Relational-Data-in-Azure
+- 📜 [01-azure-sql-database.md](02-Relational-Data-in-Azure/01-azure-sql-database.md)
+- 📜 [02-synapse-analytics.md](02-Relational-Data-in-Azure/02-synapse-analytics.md)
+- 📜 [03-mysql-postgresql.md](02-Relational-Data-in-Azure/03-mysql-postgresql.md)
+
+---
+
+### 📂 03-Non-Relational-Data-in-Azure
+- 📜 [01-cosmos-db.md](03-Non-Relational-Data-in-Azure/01-cosmos-db.md)
+- 📜 [02-blob-table-storage.md](03-Non-Relational-Data-in-Azure/02-blob-table-storage.md)
+
+---
+
+### 📂 04-Data-Analytics-in-Azure
+- 📜 [01-data-ingestion.md](04-Data-Analytics-in-Azure/01-data-ingestion.md)
+- 📜 [02-data-transformation.md](04-Data-Analytics-in-Azure/02-data-transformation.md)
+- 📜 [03-data-visualization.md](04-Data-Analytics-in-Azure/03-data-visualization.md)
+
+---
+
+### 📂 05-Security-Compliance-Azure-Data
+- 📜 [01-encryption.md](05-Security-Compliance-Azure-Data/01-encryption.md)
+- 📜 [02-access-control.md](05-Security-Compliance-Azure-Data/02-access-control.md)
+- 📜 [03-governance-policies.md](05-Security-Compliance-Azure-Data/03-governance-policies.md)
+
+---
+
+### 📂 06-Practice-Exercises
+- 📜 [01-sql-querying.md](06-Practice-Exercises/01-sql-querying.md)
+- 📜 [02-cosmosdb-examples.md](06-Practice-Exercises/02-cosmosdb-examples.md)
+- 📜 [03-synapse-exercises.md](06-Practice-Exercises/03-synapse-exercises.md)
+
 ---
 
 ## **📜 Key Markdown Documents**
@@ -56,20 +103,6 @@ This repository provides structured learning materials and exercises for **DP-90
 ### **3. `LICENSE`**
 - The type of license applied to this repository (e.g., MIT, Apache 2.0, etc.).
 - Legal permissions and restrictions for using this content.
-
----
-
-## **📘 Suggested Naming Conventions for Markdown Files**
-
-### **1. Folder Naming:**
-- Use **hyphens (-) instead of spaces** for better URL compatibility.
-- Start folders with **numbers (01-, 02-, etc.)** to enforce logical ordering.
-- Keep names **short but descriptive** (e.g., `02-Relational-Data-in-Azure`).
-
-### **2. Markdown File Naming:**
-- Use **numbers** to maintain order within folders (e.g., `01-azure-sql-database.md`).
-- Use **lowercase** with hyphens for readability (e.g., `03-data-visualization.md`).
-- Keep names **short and clear** (avoid long filenames).
 
 ---
 
