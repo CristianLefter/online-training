@@ -73,7 +73,7 @@ This repository provides structured learning materials and exercises for **DP-90
 
 ---
 
-## **🚀 Additional Enhancements**
+## **🚀 Possible Enhancements**
 
 ✅ **Add diagrams** (using Mermaid.js in GitHub or external tools).  
 ✅ **Use tables for comparisons** (SQL vs NoSQL, Data Lake vs Warehouse).  
@@ -86,11 +86,7 @@ This repository provides structured learning materials and exercises for **DP-90
 
 ## **🔗 Next Steps**
 
-1️⃣ **Create the repository on GitHub** with this structure.  
-2️⃣ **Start by adding `README.md` and core topics first.**  
 3️⃣ **Expand with examples, diagrams, and exercises over time.**  
 4️⃣ **Encourage contributions from the community.**  
-
-This structure keeps your **DP-900 repository well-organized, scalable, and easy to navigate**.  
 
 🚀 **Happy Learning & Contributing!** 😊
